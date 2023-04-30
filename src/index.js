@@ -1,12 +1,9 @@
 import './css/styles.css';
-
 import { fetchCountries } from './js/fetchCountries';
-
-var debounce = require('lodash.debounce');
+let debounce = require('lodash.debounce');
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const DEBOUNCE_DELAY = 300;
-
 const inputEl = document.getElementById('search-box');
 const countryListEl = document.querySelector('.country-list');
 const countryInfoEl = document.querySelector('.country-info');
@@ -50,7 +47,7 @@ function renderResult(countries) {
   }
 }
 
-function createListCoutry(country) {
+createListCoutry = (country) => {
   const {
     name: { common },
     flags: { svg },
@@ -62,7 +59,7 @@ function createListCoutry(country) {
   </li>`;
 }
 
-function createMurkup(country) {
+createMurkup = (country) => {
   const {
     name: { official },
     flags: { svg },
@@ -82,16 +79,17 @@ function createMurkup(country) {
   )}</p>`;
 }
 
-function dataOutputLi(markup) {
+
+
+dataOutputLi = markup => {
   countryListEl.innerHTML = markup;
-}
-
-function dataOutputInfo(markup) {
+};
+dataOutputInfo = markup => {
   countryInfoEl.innerHTML = markup;
-}
+};
 
-function onError() {
+onError = () => {
   dataOutputInfo('');
   dataOutputLi('');
   Notify.failure('Oops, there is no country with that name');
-}
+};
