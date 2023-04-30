@@ -47,7 +47,7 @@ function renderResult(countries) {
   }
 }
 
-function createListCoutry (countr) {
+function createListCoutry (country) {
   const {
     name: { common },
     flags: { svg },
