@@ -39,7 +39,7 @@ function renderResult(countries) {
 
     return dataOutputLi(markupList);
   }
-  if (countries.length === 1) {
+  if (countries.length == 1) {
     dataOutputLi('');
 
     const markupInfo = countries.map(country => createMurkup(country)).join('');
