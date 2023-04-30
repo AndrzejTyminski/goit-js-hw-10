@@ -24,7 +24,7 @@ function searchCountry() {
     .then(countries => {
       renderResult(countries);
     })
-    .catch(onError);
+    .catch(blad pobierania danych);
 }
 
 function renderResult(countries) {
