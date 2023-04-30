@@ -79,10 +79,10 @@ function createMurkup(country) {
   )}</p>`;
 }
 
-function dataOutputLi(markup) {
+function dataOutputLi (markup) {
   countryListEl.innerHTML = markup;
 }
-dataOutputInfo = markup => {
+function dataOutputInfo (markup) {
   countryInfoEl.innerHTML = markup;
 };
 
