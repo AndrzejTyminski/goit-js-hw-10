@@ -14,9 +14,9 @@ inputEl.addEventListener('input', searchCountry);
 function searchCountry() {
   const countries = inputEl.value.trim();
   console.log(inputEl.value);
-  if (countries === '') {
+  if (countries == '') {
     dataOutputInfo('');
-    dataOutputLi('');
+   dataOutputLi('');
     return;
   }
 
@@ -47,7 +47,7 @@ function renderResult(countries) {
   }
 }
 
-createListCoutry = country => {
+function createListCoutry (countr) {
   const {
     name: { common },
     flags: { svg },
