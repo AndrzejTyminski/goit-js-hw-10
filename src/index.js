@@ -86,7 +86,7 @@ function dataOutputInfo (markup) {
   countryInfoEl.innerHTML = markup;
 };
 
-onError = () => {
+function onError () {
   dataOutputInfo('');
   dataOutputLi('');
   Notify.failure('Oops, there is no country with that name');
