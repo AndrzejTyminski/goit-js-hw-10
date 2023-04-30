@@ -47,19 +47,19 @@ function renderResult(countries) {
   }
 }
 
-createListCoutry = (country) => {
+createListCoutry = country => {
   const {
     name: { common },
     flags: { svg },
   } = country;
   return `
-  <li class="coutry-item" style="display: flex; flex-direction: row; align-items:center;">
-  <img style="margin-right: 10px; width:50px; height: 30px"  src="${svg}" alt="flag" class="coutry-flag" >
+  <li class="coutry-item" style="display: flex; flex-direction: row; align-items:center; ">
+  <img style="margin-right: 10px; width:50px; height: 30px; border: 1px solid #ccc;"  src="${svg}" alt="flag" class="coutry-flag" >
   <h2 class="coutry-name">${common}</h2>
   </li>`;
-}
+};
 
-createMurkup = (country) => {
+createMurkup = country => {
   const {
     name: { official },
     flags: { svg },
@@ -68,8 +68,8 @@ createMurkup = (country) => {
     languages,
   } = country;
   return `
-  <div style="display:flex; flex-direction:row">
-  <img src="${svg}" alt="flag" style="width:50px; margin-right: 10px;" class="coutry-flag" >
+  <div style="display:flex; flex-direction:row; align-items: center;">
+  <img src="${svg}" alt="flag" style="width:50px; height: 50px; margin-right: 10px; " class="coutry-flag" >
   <h1 class="coutry-name">${official}</h1>
   </div>
   <p class="coutry-text"><b>Capital:</b> ${capital}</p>
@@ -77,9 +77,7 @@ createMurkup = (country) => {
   <p class="coutry-text"><b>Languages:</b> ${Object.values(languages).join(
     ', '
   )}</p>`;
-}
-
-
+};
 
 dataOutputLi = markup => {
   countryListEl.innerHTML = markup;
