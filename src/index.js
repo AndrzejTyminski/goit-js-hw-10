@@ -59,7 +59,7 @@ function createListCoutry (country) {
   </li>`;
 };
 
-createMurkup = country => {
+function createMurkup (country) {
   const {
     name: { official },
     flags: { svg },
