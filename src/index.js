@@ -16,7 +16,7 @@ function searchCountry() {
   console.log(inputEl.value);
   if (countries == '') {
     dataOutputInfo('');
-   dataOutputLi('');
+    dataOutputLi('');
     return;
   }
 
@@ -47,7 +47,7 @@ function renderResult(countries) {
   }
 }
 
-function createListCoutry (country) {
+function createListCoutry(country) {
   const {
     name: { common },
     flags: { svg },
@@ -57,9 +57,9 @@ function createListCoutry (country) {
   <img style="margin-right: 10px; width:50px; height: 30px; border: 1px solid #ccc;"  src="${svg}" alt="flag" class="coutry-flag" >
   <h2 class="coutry-name">${common}</h2>
   </li>`;
-};
+}
 
-function createMurkup (country) {
+function createMurkup(country) {
   const {
     name: { official },
     flags: { svg },
@@ -77,11 +77,11 @@ function createMurkup (country) {
   <p class="coutry-text"><b>Languages:</b> ${Object.values(languages).join(
     ', '
   )}</p>`;
-};
+}
 
-dataOutputLi = markup => {
+function dataOutputLi(markup) {
   countryListEl.innerHTML = markup;
-};
+}
 dataOutputInfo = markup => {
   countryInfoEl.innerHTML = markup;
 };
